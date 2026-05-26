@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Y.S - Recent Academic Projects, Research, and Experience.">
+    <title>Y.S - Recent Projects & Experiences</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/profiles/icon_pfp.jpg">
+    <script src="header.js" defer></script>
+    <style>
+        .project-mobile-header { display: none; }
+        .pdf-mobile-link       { display: none; }
+
+        .pdf-embed-box {
+            position: relative;
+            width: 380px;
+            height: 500px;
+            flex-shrink: 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            background: #fff;
+        }
+        .pdf-viewer {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+        .pdf-open-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: var(--color-primary);
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+        .pdf-embed-box:hover .pdf-open-btn {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .project-github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #2389C9;
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        }
+        .project-github-btn:hover {
+            background: #00467F;
+            box-shadow: 0 6px 20px rgba(0, 70, 127, 0.30);
+            transform: translateY(-2px);
+        }
+        .project-github-btn img {
+            width: 20px;
+            height: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .project-desktop-title { display: none; }
+            .project-mobile-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #2389C9;
+                color: #ffffff;
+                padding: 14px 18px;
+                border-radius: 10px;
+                cursor: pointer;
+                margin: 0 5% 6px;
+                user-select: none;
+            }
+            .project-mobile-title {
+                font-family: var(--font-heading);
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .project-toggle-icon {
+                font-size: 13px;
+                transition: transform 0.25s ease;
+            }
+            .project-content {
+                display: none;
+                flex-direction: column;
+                padding: 16px 5%;
+            }
+            .project-content.open { display: flex; }
+            .project-item .pdf-embed-box {
+                width: 100%;
+                height: 280px;
+                border-radius: 8px;
+            }
+            .pdf-mobile-link {
+                display: inline-block;
+                background: #2389C9;
+                color: #ffffff;
+                font-family: var(--font-heading);
+                font-size: 14px;
+                font-weight: 600;
+                padding: 12px 20px;
+                border-radius: 8px;
+                text-decoration: none;
+                text-align: center;
+                margin-bottom: 16px;
+            }
+            .pdf-open-btn { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="home" class="welcome-section">
+        <h2 class="welcome-heading">Recent Projects & Experiences</h2>
+    </section>
+    <hr>
+    <section class="welcome-section">
+        <p class="welcome-text">
+            This page highlights my technical projects, research, and professional experience.
+            My work spans data analytics, machine learning, full-stack development, and high-performance computing —
+            built across academic coursework, independent exploration, and industry internships.
+            Each project reflects a commitment to solving real-world problems through clean code, data-driven insight, and creative engineering.
+        </p>
+    </section>
+
+<br><br>
+    <section class="art-gallery">
+                <h2 class="skills-heading project-desktop-title" style="padding-left:5%;">CollaBand: Real-Time Collaborative Music Studio</h2>
+        <!-- Project : CollaBand (YouTube) -->
+<div class="art-item project-item">
+    <div class="project-mobile-header" onclick="toggleProject(this)">
+        <span class="project-mobile-title">CollaBand: Real-Time Collaborative Music Studio</span>
+        <span class="project-toggle-icon">&#9660;</span>
+    </div>
+    <div class="art-content project-content">
+        <a href="https://youtu.be/hysxApy8z10" target="_blank" class="video-embed-box">
+            <img src="https://img.youtube.com/vi/hysxApy8z10/maxresdefault.jpg" alt="CollaBand Demo" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+            <div class="video-play-btn">&#9654;</div>
+            <div class="art-title">CollaBand — View Demo↗</div>
+        </a>
+        <p class="project-description">
+            CollaBand is a full-stack web application that enables remote creators to collaboratively edit music through live, joinable sessions. The platform includes a custom music editor, interactive user dashboards, and a versioned changelog that records project updates and edit history.
+            <br><br>
+            As the Lead Front-End Engineer and UI/UX Designer on a four-person capstone team, I designed and built the entire client-side experience. I handled the full product design process, including branding, layout, and user flow, and developed the responsive ReactJS interface. I orchestrated the real-time data layer by integrating client-side WebSockets with our Django and PostgreSQL backend, ensuring high-concurrency state management and low-latency synchronization across all active sessions.
+            <br><br>
+            <strong>Tech Stack:</strong> ReactJS, Django, Python, PostgreSQL, PubNub (WebSockets), JavaScript, HTML, CSS, UI/UX Design
+        </p>
+    </div>
+</div>
+        <h2 class="skills-heading project-desktop-title" style="padding-left:5%;">Data-Driven Insights into Vehicle Fuel Performance: A Telemetry Analysis</h2>
+        <!-- Project : Car Telemetry -->
+        <div class="art-item project-item">
+            <div class="project-mobile-header" onclick="toggleProject(this)">
+                <span class="project-mobile-title">Data-Driven Insights into Vehicle Fuel Performance: A Telemetry Analysis</span>
+                <span class="project-toggle-icon">&#9660;</span>
+            </div>
+            <div class="art-content project-content">
+                <div class="pdf-embed-box">
+                    <a href="ISAN5364_Report_YS.pdf" target="_blank" class="pdf-open-btn">Open Full PDF ↗</a>
+                    <embed src="ISAN5364_Report_YS.pdf" type="application/pdf" class="pdf-viewer">
+                </div>
+                <a href="ISAN5364_Report_YS.pdf" target="_blank" class="pdf-mobile-link">View Technical Report [PDF] ↗</a>
+                <p class="project-description">
+                    In this project, I engineered a data-driven analytical framework to quantify and predict the "Performance Gap" between manufacturer-provided laboratory fuel ratings and actual real-world vehicle fuel consumption. 
+                    Utilizing a telemetry dataset of 600 trip-level records spanning 25 distinct vehicle models and multiple fuel configurations, I developed a comprehensive machine learning pipeline. 
+                    This involved performing exploratory data analysis to evaluate operational variables and architecting a three-tier predictive modeling framework to accurately forecast true fuel efficiency under unpredictable, real-world driving conditions.
+                    <br><br>
+                    Acting as the lead data analyst and modeler, I successfully built a predictive solution that empowers fleet managers to forecast fuel requirements with high precision, enabling a strategic shift toward optimized, data-driven vehicle procurement.
+                     I was able to run Multiple Linear Regression, Gradient Boosting, and Random Forest models, conducting feature importance analysis to reveal that manufacturer-rated base mileage predominantly drives real-world performance, significantly outweighing other dynamic operational factors.
+                     This transition from theoretical laboratory estimates to a data-driven reality allows organizations to efficiently allocate vehicle resources while minimizing the financial risks of performance volatility.<br><br>
+            <strong>Tech Stack:</strong> Python, Pandas, Scikit-Learn (Multiple Linear Regression, Gradient Boosting, Random Forest Regressors), Seaborn, Matplotlib, and Jupyter Notebook.
+                </p>
+                
+            </div>
+        </div>
+                <h2 class="skills-heading project-desktop-title" style="padding-left:5%;">Bank Efficiency: Comparative Analysis of Staffing Scenarios</h2>
+                <!-- Project : Bank modeling -->
+        <div class="art-item project-item">
+            <div class="project-mobile-header" onclick="toggleProject(this)">
+                <span class="project-mobile-title">Bank Efficiency: Comparative Analysis of Staffing Scenarios</span>
+                <span class="project-toggle-icon">&#9660;</span>
+            </div>
+            <div class="art-content project-content">
+                <div class="pdf-embed-box">
+                    <a href="ANLY_5335_Report.pdf" target="_blank" class="pdf-open-btn">Open Full PDF ↗</a>
+                    <embed src="ANLY_5335_Report.pdf" type="application/pdf" class="pdf-viewer">
+                </div>
+                <a href="ANLY_5335_Report.pdf" target="_blank" class="pdf-mobile-link">View Technical Report [PDF] ↗</a>
+                <p class="project-description">
+In this project, I developed a discrete‑event simulation model to analyze and optimize the operational efficiency of a banking system. Using a dataset of historical customer service records, I performed statistical analysis to identify the appropriate interarrival and service time distributions. I then built a digital twin of the bank’s routing and service network, including Sign‑In, ATM, and Teller stations, to evaluate baseline performance and quantify the operational gap created by unpredictable real‑world customer traffic.
+                    <br><br>
+Acting as the lead simulation modeler and data analyst, I successfully scaled the environment to test various resource configurations under heavy operational loads.
+ I was able to run baseline models alongside automated hardware expansion and augmented human staffing scenarios to pinpoint the true service bottlenecks within the branch's infrastructure. 
+By evaluating the system's performance metrics across these models, I established that investing in human service capacity significantly outperformed adding more machines, providing a data-backed roadmap to reduce physical crowding and improve total customer processing times.<br><br>
+            <strong>Tech Stack:</strong> Simio, Microsoft Excel (PivotGrid), Discrete-Event Simulation (DES), Queueing Theory, Statistical Distribution Fitting.
+                </p>
+            </div>
+        </div>
+        <h2 class="skills-heading project-desktop-title" style="padding-left:5%;">Automated Web-to-PDF Extraction Script</h2>
+        <!-- Project : Web tool PDF -->
+        <div class="art-item project-item">
+            <div class="project-mobile-header" onclick="toggleProject(this)">
+                <span class="project-mobile-title">Automated Web-to-PDF Extraction Script</span>
+                <span class="project-toggle-icon">&#9660;</span>
+            </div>
+            <div class="art-content project-content">
+                <div class="pdf-embed-box">
+                    <a href="Automated Asset Extraction and PDF Generation_ A Playwright Implementation.pdf" target="_blank" class="pdf-open-btn">Open Full PDF ↗</a>
+                    <embed src="Automated Asset Extraction and PDF Generation_ A Playwright Implementation.pdf" type="application/pdf" class="pdf-viewer">
+                </div>
+                <a href="Automated Asset Extraction and PDF Generation_ A Playwright Implementation.pdf" target="_blank" class="pdf-mobile-link">View Technical Report [PDF] ↗</a>
+                <p class="project-description">
+I engineered a fault-tolerant Web-to-PDF automation script using Python and Playwright to completely eliminate manual data entry. Designed to operate autonomously in highly volatile web environments, the script mimics a returning human user to evade aggressive bot detection and physically extracts rendered DOM elements. By integrating automated byte-size validation, algorithmic natural sorting, and strict local storage management to prevent memory bloat, this automation seamlessly sanitizes and compiles perfectly formatted PDFs issue by issue without human intervention.
+<br><br>
+As the sole developer for this independent project, I designed the entire end-to-end architecture. I handled the complete extraction lifecycle by implementing playwright-stealth to strip automation flags, configuring persistent Chromium contexts via local user_data_dir routing, and building interactive CAPTCHA fallback loops.
+                             <br><br>
+            <strong>Tech Stack:</strong> Python, Playwright, playwright-stealth, Chromium, img2pdf, natsort, Regex , URL Parsing (urllib)
+                </p>
+                <a href="https://github.com/SharmaYash263/-Web-to-PDF-automation-script" target="_blank" class="project-github-btn">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function toggleProject(header) {
+            const content = header.nextElementSibling;
+            const icon = header.querySelector('.project-toggle-icon');
+            const isOpen = content.classList.contains('open');
+            content.classList.toggle('open', !isOpen);
+            icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+    </script>
+</body>
+</html>

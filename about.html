@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Yash Sharma — Austin-based analyst, programmer, and artist.">
+    <title>Y.S - About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/profiles/icon_pfp.jpg">
+    <script src="header.js" defer></script>
+    <style>
+        .about-layout {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            align-items: stretch; 
+            padding: 40px 4% 20px 5%;
+        }
+
+        .about-text-col {
+            flex: 0 0 42%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .about-body-text {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.8;
+            color: #222;
+            margin: 0;
+        }
+
+        .about-body-text a {
+            color: var(--color-secondary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .about-body-text a:hover {
+            text-decoration: underline;
+        }
+
+        .about-image-col {
+            flex: 1;
+            min-width: 0;
+            position: relative; 
+            background: transparent !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            padding: 0 !important;
+        }
+
+        .about-photo {
+            position: absolute;
+            top: 0;
+            right: 0; 
+            height: 100%;
+            width: auto; 
+            max-width: 100%;
+            object-fit: contain; 
+            display: block;
+            border-radius: 12px;
+            filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.18));
+        }
+
+        .about-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        /* ── Mobile ── */
+        @media screen and (max-width: 768px) {
+            .about-layout {
+                flex-direction: column;
+                padding: 16px 5% 24px;
+                gap: 16px;
+            }
+
+           
+            .about-image-col {
+                order: -1;
+                width: 100%;
+                max-width: 100%;
+                position: static; 
+                height: 220px;
+            }
+
+            .about-photo {
+                position: static; 
+                width: 100%; 
+                height: 220px;
+                object-fit: cover;
+                object-position: center 20%;
+            }
+
+            .about-extra {
+                display: none;
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .about-extra.open {
+                display: flex;
+            }
+
+            .read-more-btn {
+                display: inline-block;
+                background: none;
+                border: none;
+                color: var(--color-secondary);
+                font-family: var(--font-body);
+                font-size: 15px;
+                font-weight: 600;
+                cursor: pointer;
+                padding: 0;
+                margin-top: -4px;
+                text-decoration: underline;
+            }
+
+            .about-buttons {
+                gap: 10px;
+                margin-top: 4px;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .read-more-btn { display: none; }
+            .about-extra { display: contents; }
+        }
+    </style>
+</head>
+<body>
+    <section id="home" class="welcome-section">
+        <h2 class="welcome-heading">About Me</h2>
+    </section>
+<hr>
+    <div class="about-layout">
+
+        <div class="about-text-col">
+
+            <p class="about-body-text">
+                My name is Yash Sharma. I'm an Austin-based Analyst, Programmer, and Artist with over
+                five years of experience in data analysis, algorithm design, database, and software
+                development. I earned my Bachelor's in Computer Science with a minor in Mathematics
+                from <strong>Texas Tech University</strong> and am currently pursuing an M.S. in Data Analytics and
+                Information Systems at <strong>Texas State University</strong>. My background blends technical work
+                with a lifelong passion for creating art, giving me a creative and precise approach to
+                problem-solving.
+            </p>
+            <div class="about-extra" id="aboutExtra">
+
+                <p class="about-body-text">
+                    I've worked on projects that combine modern technology and collaboration, like my
+                    Senior Capstone Project <a href="https://www.youtube.com/watch?v=hysxApy8z10" target="_blank">CollaBand</a>, a real-time music platform for creating and sharing
+                    projects. I also competed in the 2023 Winter Classic Invitational Student Cluster
+                    Competition with <strong>NASA</strong>, <strong>Amazon Web Services</strong>, and <strong>Oak Ridge National Laboratory</strong>.
+                    Our team, Team Matador, optimized a small HPC cluster, ultimately <a href="https://www.winterclassicinvitational.com/2023-winter-classic-the-finale/" target="_blank">earning 3rd
+                    nationwide</a>. I delivered a lecture at Texas State University on AI-generated art, analyzing
+                    trends in visibility and value using Python and data visualization. During my summer
+                    internship at <a href="https://www.linkedin.com/feed/update/urn:li:activity:7333329763865899009/" target="_blank">Onsemi</a>, I gained hands-on experience in semiconductor processes,
+                    inventory management, and operational analytics, building dashboards, tracking
+                    production metrics, and analyzing data to generate actionable insights that improved
+                    efficiency and reduced bottlenecks in a high-tech manufacturing environment.
+                </p>
+
+                <p class="about-body-text">
+                    I've been making art for as long as I can remember, and I often measure my life by how
+                    my art has grown. Each period, each memory, is tied to what I was making at the time,
+                    which makes every piece one of a kind. I started with simple sketches and
+                    experimenting with whatever materials I could find, then moved into painting and
+                    eventually digital work. Now I mix mediums however it feels right, letting the project
+                    guide me. I like challenges that push me into new styles or techniques because figuring
+                    them out is part of the process. I spend a lot of time studying other art and media,
+                    breaking it down to understand it, and then recreating it with pens, markers, or whatever
+                    I have around. Making art is just part of how I live and think, shaping how I approach
+                    projects, problem-solving, and creativity in everything I do.
+                </p>
+
+            </div>
+
+            <button class="read-more-btn" id="readMoreBtn" onclick="toggleExtra()">Read more ▾</button>
+
+            <div class="about-buttons">
+                <a href="https://www.behance.net/SharmaYash263" target="_blank" class="home-btn">Behance</a>
+                <a href="https://www.instagram.com/lord_yoshi/" target="_blank" class="home-btn">Instagram</a>
+                <a href="https://www.linkedin.com/in/yashsharma4/" target="_blank" class="home-btn">LinkedIn</a>
+                <a href="Resume_Yash_Sharma_2026.pdf" target="_blank" class="home-btn">Resume</a>
+                <a href="contact.html" class="home-btn">Contact</a>
+            </div>
+
+        </div>
+
+        <div class="about-image-col">
+            <img src="images/profiles/about_pfp2.jpg" alt="Yash Sharma" class="about-photo">
+        </div>
+
+    </div>
+
+    <script>
+        function toggleExtra() {
+            const extra = document.getElementById('aboutExtra');
+            const btn   = document.getElementById('readMoreBtn');
+            const open  = extra.classList.toggle('open');
+            btn.textContent = open ? 'Read less ▴' : 'Read more ▾';
+        }
+    </script>
+</body>
+</html>

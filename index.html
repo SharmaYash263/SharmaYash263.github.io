@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yash Sharma — Austin-based data analyst, programmer, and self-taught artist.">
+    <title>Yash Sharma - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/profiles/icon_pfp.jpg">
+    <script src="header.js" defer></script>
+    <style>
+        .pdf-open-btn {
+            position: absolute;
+            top: 10px; right: 10px;
+            background: var(--color-primary);
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 12px;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            z-index: 10;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+            pointer-events: none;
+        }
+        .pdf-embed-box:hover .pdf-open-btn {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            .project-toggle {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                user-select: none;
+                gap: 10px;
+            }
+            .project-toggle::after {
+                content: '▾';
+                font-size: 1.1em;
+                flex-shrink: 0;
+                transition: transform 0.25s ease;
+            }
+            .project-toggle.open::after {
+                transform: rotate(-180deg);
+            }
+            .project-body {
+                display: none;
+                overflow: hidden;
+            }
+            .project-body.open {
+                display: block;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .project-toggle { cursor: default; }
+            .project-toggle::after { display: none; }
+            .project-body { display: block !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="home" class="welcome-section">
+        <h2 class="welcome-heading">Welcome To My Portfolio</h2>
+    </section>
+    <hr>
+        <section id="home" class="welcome-section">
+        <p class="welcome-text">
+            Hi there! I'm Yash Sharma 
+             an Austin-based data analyst, programmer, and self-taught artist.
+            I hold a B.S. in Computer Science from Texas Tech University and am pursuing an M.S. in Data Analytics
+            and Information Systems at Texas State University. I specialize in data analysis, machine learning,
+            algorithm design, and full-stack development, with hands-on experience from an internship at Onsemi
+            and a 3rd place finish in a national HPC competition with NASA, AWS, and Oak Ridge National Laboratory.
+Alongside my technical work, I am a self-taught artist, exploring multiple mediums to blend creativity, technology, and passion.
+        </p>
+    </section>
+
+    <section class="skills-section">
+        <h2 class="skills-heading">Technical Skills</h2>
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3 class="skill-card-title">Programming</h3>
+                <ul class="skill-list">
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python"><span>Python</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/r/r-original.svg" alt="R"><span>R</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" alt="SQL"><span>SQL</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" alt="C"><span>C</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java"><span>Java</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="HTML"><span>HTML</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="CSS"><span>CSS</span></li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-card-title">Software &amp; Frameworks</h3>
+                <ul class="skill-list">
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" alt="PyTorch"><span>PyTorch</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="Pandas"><span>Pandas</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" alt="Scikit-learn"><span>Scikit-learn</span></li>
+                    <li><img src="images/profiles/Snowflake.jpg" alt="Snowflake"><span>Snowflake</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>PostgreSQL</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB"><span>MongoDB</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="ReactJS"><span>ReactJS</span></li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3 class="skill-card-title">Tools &amp; Platforms</h3>
+                <ul class="skill-list">
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js"><span>Node.js</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="Linux"><span>Linux</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="Git"><span>Git</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg" alt="Playwright"><span>Playwright</span></li>
+                    <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="VS Code"><span>VS Code</span></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+    
+        <h2 class="welcome-heading" style="padding-left:5%;">Featured Work</h2>
+    <section class="art-gallery">
+                <h2 class="skills-heading project-toggle" style="padding-left:5%;" onclick="toggleProject(this)">Data-Driven Insights into Vehicle Fuel Performance: A Telemetry Analysis</h2>
+        <div class="art-item project-body">
+            <div class="art-content">
+                <div class="pdf-embed-box">
+                    <a href="ISAN5364_Report_YS.pdf" target="_blank" class="pdf-open-btn">Open Full PDF ↗</a>
+                    <embed src="ISAN5364_Report_YS.pdf" type="application/pdf" class="pdf-viewer">
+                </div>
+                <p class="art-description">
+                    I engineered a data-driven analytical framework to quantify and predict the performance gap between
+                    manufacturer fuel ratings and real-world vehicle fuel consumption, using a dataset of 600 trip-level records
+                    across 25 vehicle models. <br><br>
+                    I built a machine learning pipeline using Multiple Linear Regression, Gradient Boosting,
+                    and Random Forest models to forecast true fuel efficiency under real-world driving conditions.
+                    You can view more about this and other projects <a href="projects.html">Here</a>.
+                </p>
+            </div>
+        </div>
+
+        <h2 class="skills-heading project-toggle" style="padding-left:5%;" onclick="toggleProject(this)">CollaBand: Real-Time Collaborative Music Studio</h2>
+        <div class="art-item project-body">
+            <div class="art-content">
+                <a href="https://youtu.be/hysxApy8z10" target="_blank" class="video-embed-box">
+                    <img src="https://img.youtube.com/vi/hysxApy8z10/maxresdefault.jpg" alt="CollaBand Demo" style="width:100%;height:100%;object-fit:cover;border-radius:12px;">
+                    <div class="video-play-btn">&#9654;</div>
+                    <div class="art-title">CollaBand — Watch on YouTube ↗</div>
+                </a>
+                <p class="art-description">
+                    CollaBand is a full-stack web application that enables remote creators to collaboratively edit music through live, joinable sessions.
+                    You can view more about this and other projects <a href="projects.html">Here</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="home-buttons" style="justify-content:center;">
+        <a href="about.html" class="home-btn">About Me</a>
+        <a href="projects.html" class="home-btn">Projects</a>
+        <a href="art_page.html" class="home-btn">Arts & Media</a>
+        <a href="contact.html" class="home-btn">Contact</a>
+    </section>
+
+    <script>
+        function toggleProject(heading) {
+            if (window.innerWidth > 768) return;
+            const body = heading.nextElementSibling;
+            const isOpen = body.classList.toggle('open');
+            heading.classList.toggle('open', isOpen);
+        }
+    </script>
+</body>
+</html>
